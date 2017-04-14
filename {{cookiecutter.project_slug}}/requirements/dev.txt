@@ -3,3 +3,7 @@
 # here goes everything for dev instance: silk, django extensions, django debug toolbar
 django-debug-toolbar
 django-extensions
+django-test-plus
+coverage
+django-coverage-plugin
+honcho
