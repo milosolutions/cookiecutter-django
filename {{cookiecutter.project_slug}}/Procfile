@@ -1,0 +1,2 @@
+w: PYTHONUNBUFFERED=true python manage.py runserver 0.0.0.0:8080
+c: PYTHONUNBUFFERED=true celery worker -A {{cookiecutter.project_slug}}.taskapp.celery -E -l info
