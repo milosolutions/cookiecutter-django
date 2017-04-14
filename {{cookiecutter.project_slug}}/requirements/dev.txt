@@ -1,0 +1,5 @@
+-r base.txt
+
+# here goes everything for dev instance: silk, django extensions, django debug toolbar
+django-debug-toolbar
+django-extensions

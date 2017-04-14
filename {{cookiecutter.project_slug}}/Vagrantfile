@@ -1,0 +1,36 @@
+# -*- mode: ruby -*-
+# # vi: set ft=ruby :
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+
+VAGRANTFILE_API_VERSION = "2"
+PROVISION_DIR = "vagrant/provision"
+
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # Box
+  config.vm.box = "ubuntu/xenial64"
+
+  # Post-up message
+  config.vm.post_up_message = "Hello this is post vagrant message, run 'rs' to run server. "
+
+  # Provider
+  config.vm.provider "virtualbox" do |v|
+      v.memory = 2048
+      v.cpus = 2
+  end
+
+  # Ports
+  config.vm.network :forwarded_port, guest: 8000, host: 8000
+
+  # Database provision
+  config.vm.provision :shell, :path => "#{PROVISION_DIR}/postgresql.sh"
+
+  # Provision
+  config.vm.provision :shell, :path => "#{PROVISION_DIR}/provision.sh"
+
+  # Project provision
+  config.vm.provision :shell, :path => "#{PROVISION_DIR}/provision_project.sh"
+
+  # Provision always
+  config.vm.provision :shell, :path => "#{PROVISION_DIR}/provision_always.sh", run: "always"
+end

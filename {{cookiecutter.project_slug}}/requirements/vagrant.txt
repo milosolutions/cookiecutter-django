@@ -1,0 +1,3 @@
+-r dev.txt
+
+# this one is dedicated for vagrant instance
