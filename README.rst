@@ -1,5 +1,5 @@
 Milosolutions Cookiecutter Django
-=======================
+=================================
 
 .. image:: https://pyup.io/repos/github/pydanny/cookiecutter-django/shield.svg
      :target: https://pyup.io/repos/github/pydanny/cookiecutter-django/
@@ -24,7 +24,7 @@ Powered by Cookiecutter_, Milosolutions Cookiecutter Django is a framework for j
 .. _issues: https://github.com/pydanny/cookiecutter-django/issues/new
 
 Features
----------
+--------
 
 * For Django 1.10
 * Renders Django projects with 100% starting test coverage
@@ -73,7 +73,7 @@ Constraints
 
 
 Usage
-------
+-----
 
 Let's pretend you want to create a Django project called "redditclone". Rather than using `startproject`
 and then editing the results to include your name, email, and various configuration issues that always get forgotten until the worst possible moment, get cookiecutter_ to do all the work.
@@ -84,7 +84,7 @@ First, get Cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/pydanny/cookiecutter-django
+    $ cookiecutter https://github.com/milosolutions/cookiecutter-django
 
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
 
@@ -115,14 +115,12 @@ Answer the prompts with your own desired options_. For example::
     use_compressor [n]: y
     Select postgresql_version:
     1 - 9.5
-    2 - 9.4
     Choose from 1, 2 [1]: 1
     Select js_task_runner:
     1 - Gulp
     2 - Grunt
-    3 - Webpack
     4 - None
-    Choose from 1, 2, 3, 4 [1]: 1
+    Choose from 1, 2, 3 [1]: 1
 
 Enter the project and take a look around::
 
@@ -134,7 +132,7 @@ Create a git repo and push it there::
     $ git init
     $ git add .
     $ git commit -m "first awesome commit"
-    $ git remote add origin git@github.com:pydanny/redditclone.git
+    $ git remote add origin git@github.com:xxxxxx/xxxxxxxxx.git
     $ git push -u origin master
 
 Now take a look at your repo. Don't forget to carefully look at the generated README. Awesome, right?
@@ -146,13 +144,11 @@ For local development, see the following:
 TODO
 ----
 
-- add celery ( make sure it works properly
-- add honcho ( for running celery/web in one terminal )
 - add memcache for default caching
 
 
 Fork This
-~~~~~~~~~~
+~~~~~~~~~
 
 If you have differences in your preferred setup, I encourage you to fork this to create your own version.
 Once you have your fork working, let me know and I'll add it to a '*Similar Cookiecutter Templates*' list here.
