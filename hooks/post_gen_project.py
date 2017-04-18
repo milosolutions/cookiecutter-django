@@ -74,7 +74,7 @@ def make_secret_key(project_directory):
     set_secret_key(local_setting)
 
     env_file = os.path.join(
-        project_directory,
+        project_directory, 'vagrant/templates/',
         'env.example'
     )
 
