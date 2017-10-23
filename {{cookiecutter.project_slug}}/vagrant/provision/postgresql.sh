@@ -60,8 +60,7 @@ then
 
     if [ $POSTGRES_VERSION ]
     then
-      apt-get install -y "postgresql-$POSTGRES_VERSION" postgresql-contrib "postgresql-server-dev-$POSTGRES_VERSION"
-
+      apt-get install -y "postgresql-$POSTGRES_VERSION" postgresql-contrib libpq-dev
     else
       apt-get install -y "postgresql" postgresql-contrib libpq-dev
       POSTGRES_VERSION=$(pg_config --version | egrep -o '[0-9]{1,}\.[0-9]{1,}')
